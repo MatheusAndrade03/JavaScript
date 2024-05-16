@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas</title>
+</head>
+<body>
+    <main>
+
+        <label for="ivel">Velocidade: </label>
+        <input type="number" name="vel" id="ivel">KM/H
+        <input  id= "botao" type= "button" value= "Ver" onclick = "clicou()">
+        <div id="resul" >resultado</div>
+
+
+        <script>
+            
+            function clicou(){
+                    velocidade= window.document.getElementById('ivel')
+                    vel= Number.parseInt(velocidade.value)
+                    resul = window.document.querySelector('#resul')
+                   
+                    if(vel>60)
+                    {
+
+                     resul.innerText= `Sua velocidade é  ${vel} KM/H , Multado `
+                    
+                            
+
+
+                    }else{
+
+                           resul.innerHTML= ` Sua velocidade   é ${vel} KM/H, Boa viagem`
+
+                    }
+
+
+
+
+            }
+
+
+
+
+        </script>
+
+    </main>
+    
+</body>
+</html>

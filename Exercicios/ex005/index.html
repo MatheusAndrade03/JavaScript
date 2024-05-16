@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a usar o DOM</title>
+
+    <style>
+        body{
+            background-color: rgba(89, 214, 84, 0.89);
+        }
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 45px;
+            background-color: rgb(0, 119, 255);
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px black;
+            cursor: pointer;
+
+        }
+        #modal{
+            display: none;
+        
+            width: 300px;
+            height: 200px;
+            font-size: 32px;
+            color: aliceblue;
+            background-color: brown;
+        
+        }
+
+
+
+
+    </style>
+</head>
+<body >
+    <h1>Prendendo a usar o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Vamos iniciar o estudo do DOM</p>
+    <div  class="botao">CLique aqui</div>
+    <div id="modal"> Oiiiii vc clicou </div>
+<script>
+    var botao = window.document.querySelector(".botao")
+    
+    botao.style.backgroundColor="yellow"
+    botao.style.color="black"
+
+    botao.addEventListener('click',clicou)
+    botao.addEventListener('mouseenter',entrou)
+    botao.addEventListener('mouseout',sair)
+   
+  
+
+ function clicou(){
+        modal = window.document.querySelector("#modal")
+        body= window.document.body
+
+        if( modal.style.display=="none"){
+            modal.style.display="flex"
+            modal.style.alignitems="center"
+            body.style.backgroundColor="black"
+            
+
+
+
+
+
+
+        }else{
+
+            modal.style.display="none"
+            body.style.backgroundColor=" rgba(89, 214, 84, 0.89)";
+        }
+
+
+ }
+ function entrou(){
+   var  botao = window.document.getElementsByClassName('botao')[0]
+    botao.style.backgroundColor="red"
+
+
+
+
+
+ }
+
+ function sair(){
+    botao= window.document.querySelector(".botao")
+    botao.style.backgroundColor="yellow"
+
+
+
+
+ }
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
