@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    min-width: 250px;
+    }
+    * {
+    box-sizing: border-box;
+    }
+    h2{
+        font-size: 34px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        text-shadow: 1px 1px 3px black;
+
+    }
+    ul {
+    margin: 0;
+    padding: 0;
+    }
+    
+    ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    }
+    .close {position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+        }
+        .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(4, 4, 236);
+        padding: 30px 40px;
+        color: white;
+        text-align: center;
+        gap: 10px;
+        }
+        .header:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        input {
+        margin: 0;
+        
+        border: none;
+        border-radius: 20px;
+        width: 75%;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+        }
+        .addBtn {
+        padding: 10px;
+        width: 25%;
+        background: #2b2929;
+        color: #fffffff5;
+        box-shadow: 1px 1px 3px black;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 20px;
+
+        }
+        ul li{
+                margin-left: 10px;
+                margin-top: 3px;
+                border-radius: 10px;
+                width: 90%;
+
+        }
+ul li:nth-child(odd) {
+            background: #0879e4;
+}
+ ul li:hover {
+            background: #0e2270;
+            color: #eee;
+     }
+
+.close:hover {
+                background-color:rgb(40, 8, 182);
+                color: white;
+}
+
+addBtn:hover {
+                    background-color: #bbb;
+ }
+ select{
+
+    font-size: 24px;
+    background-color: #f1f1f1b2;
+    width: 25%;
+    border-radius: 20px;
+ }
+                
+ .close {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+    transition: 0.3s;
+  }
+  
+  .close:hover {
+    color: red;
+  }
+  
+  /* Estilo para o botão de editar */
+  .edit {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    padding: 12px 16px;
+    transition: 0.3s;
+  }
+  
+  .edit:hover {
+    color: blue;
+  }
+  </style>
+  </head>
+  <body>

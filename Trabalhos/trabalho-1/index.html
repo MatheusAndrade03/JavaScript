@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de tarefas</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="header">
+    <h2>Lista de tarefas</h2>
+    <input type="text" id="tarefa" placeholder="Informe a tarefa">
+    <input type="date" name="data" id="idata">
+    <select id="categoria">
+        <option value="Trabalho">Trabalho</option>
+        <option value="Estudo">Estudo</option>
+        <option value="Lazer">Lazer</option>
+        <option value="Outro">Outro</option>
+      </select>
+    <button onclick="addElemento()" class="addBtn">Incluir</button>
+    <button onclick="excluirTodos()" class="addBtn">Excluir</button>
+    </div>
+    <ul id="itemLista">
+    <li class="checked">Tomar café</li>
+    <li>Fazer compras</li>
+    <li>Entregar atividade no moodle</li>
+    </ul>
+
+
+    <script src="index.js"></script>
+
+
+
+</body>
+</html>
+    
