@@ -72,11 +72,13 @@ input[type=radio]{
     height: 700px;
     display: none;
     justify-content: center;
+    align-items: baseline;
     
 
 }
 img{
-
+    align-self: flex-end;
+    height: 70%;
     border-radius: 20px;
-    width: 500px;
+    width: 400px;
 }
