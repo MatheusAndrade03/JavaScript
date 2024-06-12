@@ -1,4 +1,6 @@
-var num[4] ='1,2'
-num[2]=9
+var num = [6]
+num.push(5)
+num[2]=10
 
-console.log( `nosso ${num}`)
+var res=num.indexOf(10)
+console.log( `nosso ${num} e ${res}`)
