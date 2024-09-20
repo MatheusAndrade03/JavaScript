@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+/* geral */
+
+body{
+    width: 100vw;
+    height: 100%;
+    background-color: #000;
+}
+/* topo */
+.topo{
+    padding: 40px 4%;
+}
+.topo form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ span{
+    color: #f30c0c;
+    
+}
+.topo form h2{
+    color: #f30c0c;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+
+}
+.topo .id-busca {
+    padding: 30px;
+    margin: 20px 0;
+
+
+}
+.topo .id-busca label{
+    color: #fff;
+    font-size: 20px;
+}
+.topo .id-busca input{
+    color: #960202;
+}
+.topo .check-box {
+    display: flex;
+    gap: 40px;
+}
+.topo .check-box .box label{
+    color: #fff;
+    font-size: 24px;
+}
+.topo .btn-vai{
+    margin: 40px;
+}
+.topo .btn-vai input{
+    width: 200px;
+    height: 28px;
+    background-color: #f30c0c;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 30px;
+    transition: all ease .5s;
+}
+.topo .btn-vai input:hover{
+    background-color: #960202;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 8px #f30c0c;
+}
