@@ -3,7 +3,7 @@
 function carregar(){
 
 var  data = new Date()
-var  hora = 15
+var  hora = data.getHours()
 var img = window.document.getElementById('imgHoras')
 var horas = window.document.getElementById('horas')
 var corpo= window.document.body
