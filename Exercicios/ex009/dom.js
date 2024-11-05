@@ -4,12 +4,12 @@ corpo.style.display = "flex";
 corpo.style.height = "100vh";
 corpo.style.alignItems = "center";
 corpo.style.justifyContent = "center";
-corpo.style.margin = "0"; // Remove qualquer margem padrão do body
-corpo.style.flexDirection = "column"; // Alinha os elementos filhos verticalmente
+corpo.style.margin = "0"; 
+corpo.style.flexDirection = "column"; 
 
 
-corpo.innerText="Olá, Mundo!"; // Altera o texto do corpo da página para "Olá, 
-corpo.innerHTML += "<h1 id='num'>Olá, Mundo!</h1>"; // Altera o texto do corpo da página para "Olá, Mundo!" dentro de um h1 com id "num"
+corpo.innerText="Olá, Mundo!";
+corpo.innerHTML += "<h1 id='num'>Olá, Mundo!</h1>"; 
 const num = document.getElementById("num");
 num.style.color = "red"; // Altera a cor do texto do h1 para vermelho
 corpo.innerHTML +="<div id='div1'> <p> Isso ai 🤘 </p> </div>"; // Adiciona um div vazio com id "div1" ao corpo da página
