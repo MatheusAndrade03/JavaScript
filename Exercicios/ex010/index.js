@@ -32,9 +32,7 @@ div.innerHTML += `<p>${number}</p>`;
 div.appendChild(buton);
 buton.textContent = 'X';
 buton.setAttribute('class', 'buton-x');
-buton.addEventListener('click', () => {
-    div.remove();
-});
+
 div.style.backgroundColor = cor;
 
 
@@ -42,6 +40,13 @@ container.appendChild(div);
 id=id+1;
 
 
+});
+
+container.addEventListener('click', (event) => {
+    
+    if(event.target.classList.contains('buton-x')){
+        event.target.parentElement.remove();
+    }
 });
 
 
