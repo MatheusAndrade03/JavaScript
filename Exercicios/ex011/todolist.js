@@ -2,7 +2,6 @@ const txtInput= document.querySelector('#task');
 const corpo= window.document.body;
 const btnAdd= document.querySelector('#add');
 const lista = document.querySelector('#list');
-let id = 0;
 
 console.log(txtInput.value);
 
@@ -13,13 +12,7 @@ console.log(txtInput.value);
 // chamadas de btn e funções
 
 // carregar  lista
-
-
 const loadList = ()=>{
-       
-
-
-
     for(let i = 0; i < localStorage.length; i++) {
         const li= document.createElement('li');
         li.innerHTML = localStorage.getItem(localStorage.key(i));
@@ -43,6 +36,8 @@ const loadList = ()=>{
 // criar lista
 btnAdd.addEventListener('click', () => {
 
+    let id = gerarIdUnico();
+
     const valor = txtInput.value;
     const regex = /\d/;
     if(valor === ''|| regex.test(valor)){
@@ -56,7 +51,6 @@ btnAdd.addEventListener('click', () => {
     const li= document.createElement('li');
     li.innerHTML = valor;
     li.setAttribute("id", "lista"+id);
-    console.log(li.getAttribute('id'));
     const btnDel= document.createElement('button');
     btnDel.innerHTML = 'x';
     btnDel.setAttribute("class", "delete");
@@ -70,12 +64,17 @@ btnAdd.addEventListener('click', () => {
     })
 
     lista.appendChild(li);
-    txtInput.value = '';
     
-    id++;
-
-    
-
+    limparCampoTxt();
 
 
 })
+
+function limparCampoTxt(){
+    txtInput.value = ''
+}
+
+// gerar id unico
+function gerarIdUnico() {
+    return '_' + Math.random().toString(36).substr(2, 9);
+}
