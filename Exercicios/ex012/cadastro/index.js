@@ -29,51 +29,19 @@ botaoCadastrar.addEventListener('click', ()=>{
 
          let id=gerarId();
 
-        const  cadastro = {Usuario, Senha, Email, id };
+        const  cadastro = {Usuario, Senha, Email, id,colabordores:[] };
         
-        let cadastros = JSON.parse(localStorage.getItem('cadastros')) || [];
+        let cadastros = JSON.parse(localStorage.getItem(cadastro.Usuario)) || [];
         cadastros.push(cadastro);
-        localStorage.setItem("cadastros", JSON.stringify(cadastros));
-
-        adicionarLista(cadastro);
+        localStorage.setItem(`${cadastro.Usuario}`, JSON.stringify(cadastros));
+        window.alert("Cadastro realizado com sucesso");
         limparCampos();
         
 
 })
 
 
-// function 
-
-// remove um elemento da lista
-function removerLista(cadastro){
-
-    let cadastros= JSON.parse(localStorage.getItem("cadastros"))
-    let novoCadastro= cadastros.filter(item=> item.id!=cadastro.id);
-    localStorage.setItem("cadastros", JSON.stringify(novoCadastro));
-    
-    
-}
-
-// adiciona um novo elemento na lista 
-function adicionarLista(cadastro){
-
-        const lista = document.querySelector('#lista-usuarios')
-        const item = document.createElement('li');
-        item.innerHTML = `<p>${cadastro.Usuario}</p>  <p>${cadastro.Email}</p> <p>${cadastro.Senha}</p>`;
-        const btnExcluir = document.createElement('button');
-        btnExcluir.innerHTML="X";
-        btnExcluir.setAttribute('id', 'btn-excluir');
-       item.appendChild(btnExcluir);
-        
-        btnExcluir.addEventListener('click', ()=>{
-            removerLista(cadastro);
-            item.remove();
-        })
-
-       lista.appendChild(item);
-}
-
-// limpar campos
+// Função para limpar os campos
 
 function limparCampos(){
 
@@ -88,27 +56,10 @@ function gerarId(){
     return '_' + Math.random().toString(36).substr(2, 9);
 }
 
-// carregar lista de cadastros
-
-function carregarLista() {
-
-    let cadastros= JSON.parse(localStorage.getItem("cadastros")) || []
-    cadastros.forEach(item=> adicionarLista(item));
 
 
 
 
 
-}
-function atualizarLista(){
-    lista.innerHTML = '';
-    carregarLista();
-}
 
-// carrega a lista de cadastros
-function load(){
-
-        carregarLista();
-
-}
 
