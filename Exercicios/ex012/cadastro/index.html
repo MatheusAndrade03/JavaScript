@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="load()">
+
+    <main>
+
+
+            <form  action="" onsubmit="return false;">
+                <div class="cadastro-wrapper">
+                       <h1>Cadastre um Usuario</h1>
+                       <div class="login-wrap">
+                
+                            <label for="login">email:</label>
+                            <input type="email" name="login" id="email" required >
+                       </div><!-- casdatro-wrap -->
+                
+                         <div class="senha-wrap">
+                            <label for="senha">Senha:</label>
+                            <input type="password" name="senha" id="senha" required >
+                        </div>  <!-- usuario-wrap -->
+                        <div class="usuario-wrap">
+                            <label for="usuario">usuario:</label>
+                            <input type="text" name="usuario" id="usuario" required >
+                        </div>  <!-- usuario-wrap -->
+                </div> <!-- cadastro-wrapper -->
+                
+                <div class="botao-wrapper">
+                  <input type="submit" value="Cadastrar" id="btn-cadastrar"  >
+                </div> <!-- botao-wrapper -->
+            </form>
+            <div class="lista-wraper">
+                    <ul id="lista-usuarios">
+                        
+
+
+
+                    </ul>
+
+            </div><!-- lista-wraper -->
+            
+
+
+    </main>
+
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
