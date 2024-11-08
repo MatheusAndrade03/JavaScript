@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+  background-color: #000000dd;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.menu-wrapper{
+    background-color: rgb(254, 254, 254);
+    
+    display: flex;
+    margin: 40px 4%;
+
+}
+
+main{
+    width: 100vh;
+}
